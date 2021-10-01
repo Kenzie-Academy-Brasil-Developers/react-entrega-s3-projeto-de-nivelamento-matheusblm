@@ -38,17 +38,47 @@ function Cart() {
   }, 0);
   return (
     <>
-      <span>Preco dos itens: {totalPrice}</span>
-      <span>Desconto Obtido: {totalDiscount}</span>
-      <h4>Preco total: {totalPrice - totalDiscount}</h4>
+      <span>
+        Preco dos itens:{" "}
+        {totalPrice.toLocaleString("pt-br", {
+          style: "currency",
+          currency: "BRL",
+        })}
+      </span>
+      <span>
+        Desconto Obtido:{" "}
+        {totalDiscount.toLocaleString("pt-br", {
+          style: "currency",
+          currency: "BRL",
+        })}
+      </span>
+      <h4>
+        Preco total:{" "}
+        {(totalPrice - totalDiscount).toLocaleString("pt-br", {
+          style: "currency",
+          currency: "BRL",
+        })}
+      </h4>
       <Form products={products} setProducts={setProducts} />
       <ul>
         {products.map((product) => (
           <li key={product.code}>
             <h3>Produto: {product.name}</h3>
             <span>Descricao: {product.description}</span>
-            <h4>Preco: {product.price}</h4>
-            <p>Desconto: {product.discount}</p>
+            <h4>
+              Preco:{" "}
+              {product.price.toLocaleString("pt-br", {
+                style: "currency",
+                currency: "BRL",
+              })}
+            </h4>
+            <p>
+              Desconto:{" "}
+              {product.discount.toLocaleString("pt-br", {
+                style: "currency",
+                currency: "BRL",
+              })}
+            </p>
           </li>
         ))}
       </ul>

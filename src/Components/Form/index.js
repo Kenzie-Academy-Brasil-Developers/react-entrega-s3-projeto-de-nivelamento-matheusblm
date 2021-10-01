@@ -24,26 +24,31 @@ function Form({ products, setProducts }) {
         <input
           type="text"
           value={codeUser}
+          placeHolder="Codigo"
           onChange={(e) => setCodeUser(e.target.value)}
         />
         <input
           type="text"
           value={nameUser}
+          placeHolder="Nome do produto"
           onChange={(e) => setNameUser(e.target.value)}
         />
         <input
           type="text"
           value={descriptionUser}
+          placeHolder="Descricao"
           onChange={(e) => setDescriptionUser(e.target.value)}
         />
         <input
           type="text"
           value={priceUser}
+          placeHolder="Preco"
           onChange={(e) => setPriceUser(e.target.value)}
         />
         <input
           type="text"
           value={discountUser}
+          placeHolder="Desconto"
           onChange={(e) => setDiscountUser(e.target.value)}
         />
         <button type="submit">Cadastrar</button>
