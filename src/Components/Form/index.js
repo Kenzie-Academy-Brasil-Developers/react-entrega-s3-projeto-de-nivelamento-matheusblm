@@ -20,6 +20,7 @@ function Form({ products, setProducts }) {
   };
   return (
     <>
+      <h3>Cadastro de itens</h3>
       <form onSubmit={(e) => handleSubmit(e)}>
         <input
           type="text"
